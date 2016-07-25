@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myCHAT.io</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="form-signin">myCHAT.io</h1>
+    <form class="form-signin" id="formulaire">
+        <h2 class="form-signin-heading">Please Signin</h2>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="USERNAME" autofocus>
+        <br>
+        <label for="mail" class="sr-only">Mail</label>
+        <input type="text" class="form-control" id="mail" placeholder="EMAIL">
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        <br>
+    </form>
+    <canvas id="canvas"></canvas>
+    <div class="panel-group hidden" id="connected_users">
+        <div class="panel-info" id="">
+            <form class="form-signin">
+                <h5 class="form-signin-heading">Utilisateurs Connectés : </h5>
+                <br>
+                <ul id="user_list"></ul>
+            </form>
+        </div>
+        <div class="panel-body">
+            <h3 class="panel-heading">Liste des Messages :</h3>
+            <br>
+            <ul id="list_message"></ul>
+        </div>
+    
+        <form class="form-horizontal">
+        <div class="form-group">
+        <input class="form-control" type="text" id="msg" autofocus/>
+        </div>
+         <button class="btn btn-warning" id="submit" type="submit">Send</button>
+        </form>
+     </div>
+    
+</div>
+<script src="/js/jquery.js" ></script>
+<script src="/socket.io/socket.io.js" ></script>
+<script src="/js/index.js" ></script>
+<script type="text/javascript" src="/js/Wire.js"></script>
+</body>
+</html>
